@@ -1,0 +1,11 @@
+* 概要
+自分でなおしてみたりした ebuild をおいています。
+* 使い方
+  /etc/layman/layman.cfg の overlays のところに
+  http://github.com/eiel/portage-overlay/raw/master/repository.xml を追加する
+
+  #+BEGIN_EXAMPLE
+  overlays  : http://www.gentoo.org/proj/en/overlays/repositories.xml
+              http://github.com/eiel/portage-overlay/raw/master/repository.xml
+  #+END_EXAMPLE
+  あとは layman -a eiel
