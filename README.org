@@ -6,6 +6,6 @@
 
   #+BEGIN_EXAMPLE
   overlays  : http://www.gentoo.org/proj/en/overlays/repositories.xml
-              http://github.com/eiel/portage-overlay/raw/master/repository.xml
+              http://github.com/eiel/eiel-overlay/raw/master/repository.xml
   #+END_EXAMPLE
   あとは layman -a eiel
