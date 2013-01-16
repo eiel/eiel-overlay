@@ -241,6 +241,12 @@ src_prepare() {
 		-e '/$(INSTALL)/s/ $(libexecdir)/ $(DESTDIR)$(libexecdir)/g' \
 		-e '/$(INSTALL)/s/ $(man1dir)/ $(DESTDIR)$(man1dir)/g'  \
 		contrib/subtree/Makefile
+
+	if [[ $CHOST == *-darwin* ]]; then
+		sed -i \
+		-e 's:EXTLIBS =:EXTLIBS = -lintl:' \
+		contrib/svn-fe/Makefile
+	fi
 }
 
 git_emake() {
